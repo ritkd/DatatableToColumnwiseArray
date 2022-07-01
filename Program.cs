@@ -10,19 +10,19 @@ namespace DatatableToColumnwiseArray
         static void Main(string[] args)
         {
             //Create datatable and fill with dummydata
-            int Rows = 10; //1 million
+            int Rows = 1000000; //1 million
             int Cols = 10;
             DataTable MockTable = new DataTable().GetDataTableWithMockDataExtension(Rows,Cols);
             List<string[]> Result =MockTable.ToColumnwiseArray();
              
-            foreach (string[] item in Result)
-            {
-                foreach (string val in item)
-                {
-                    Console.WriteLine(val,"/n");
-                }
-                Console.WriteLine("/n/n");
-            }
+            //foreach (string[] item in Result)
+            //{
+            //    foreach (string val in item)
+            //    {
+            //        Console.WriteLine(val,"/n");
+            //    }
+            //    Console.WriteLine("/n/n");
+            //}
             Console.ReadKey();
         }
     }
